@@ -19,7 +19,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Crimson+Text:ital,wght@1,600&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-    <title>8848 Trading</title>
+    <title>8848 Trader</title>
+    <style type="text/css">
+      .inline { 
+       display: inline-block;
+       border: 1px solid red; 
+       /* margin:10px; */
+       }
+     </style>
   </head>
   <body>
       {{-- topbar --}}
@@ -63,7 +70,7 @@
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container">
-            <a class="navbar-brand" href="#"><img src="{{ asset('images/8848logo.png') }}" width="80" alt=""> <strong style="font-family: 'Crete Round', serif;">8848 Traders</strong></a>
+            <a class="navbar-brand" href="/"><img src="{{ asset('images/8848logo.png') }}" width="80" alt=""> <strong style="font-family: 'Crete Round', serif;">8848 Traders</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -85,9 +92,17 @@
                   <a class="nav-link" href="/ourcourse" style="font-family: 'Crete Round', serif;">Our Courses</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="/material" style="font-family: 'Crete Round', serif;">Resources</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="/contact" style="font-family: 'Crete Round', serif;">Contact</a>
                 </li>
-              </ul>
+                <li class="nav-item">
+                  <a class="nav-link text-danger" href="/login" style="font-family: 'Crete Round', serif;">SignIn</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-danger" href="/signup" style="font-family: 'Crete Round', serif;">Signup</a>
+                </li>
             </div>
           </div>
         </nav>
@@ -115,8 +130,8 @@
             <h1>Quicks Links</h1>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="/tradingcommunity1st">Our Community</a></li>
-              <li><a href="/frontendcourses">Our Courses</a></li>
+              <li><a href="/stockmarketcommunity">Our Community</a></li>
+              <li><a href="/courses">Our Courses</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
@@ -132,11 +147,11 @@
 
           <div class="col-md-4">
             <h1>Social</h1>
-            <a href="https://www.facebook.com/8848trader/"><i class="fab fa-facebook" style="font-size: 2rem;color: blue"></i></a>
+            <a href="https://www.facebook.com/8848trader/"><i class="fab fa-facebook" style="font-size: 2rem"></i></a>
             <a href="https://www.instagram.com/8848_trader/?igshid=9g27wbgrqd1r&fbclid=IwAR3O1Rk1FQLbt68vbsyhwI-xBhaj6Ml49sLebrJ_Ml1z1g6UQHKVy-oulwU"><i class="fab fa-instagram" style="font-size: 2rem;color: blue ; color:  #9b3675"></i></a>
-            <a href=""><i class="fab fa-telegram" style="font-size: 2rem;color: blue"></i></a>
-            <a href=""><i class="fab fa-twitter" style="font-size: 2rem;color: blue"></i></a>
-            <a href=""><i class="fab fa-discord" style="font-size: 2rem;color: blue"></i></a>
+            <a href=""><i class="fab fa-telegram" style="font-size: 2rem;"></i></a>
+            <a href=""><i class="fab fa-twitter" style="font-size: 2rem;"></i></a>
+            <a href=""><i class="fab fa-discord" style="font-size: 2rem;"></i></a>
 
           </div>
         </div>

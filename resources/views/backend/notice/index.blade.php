@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -36,9 +36,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                                @foreach ($notice as $notice)
+                                @foreach ($notice as $key=>$notice)
                                 <tr>
-                                    <td>{{ $notice->id }}</td>
+                                    <td>{{ ++$key }}</td>
                                     <td>{{ $notice->name }}</td>
                                     <td>
                                         <form action="/notice/{{ $notice->id }}" method="post">

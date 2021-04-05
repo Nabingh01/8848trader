@@ -16,8 +16,7 @@ class SuscribtionController extends Controller
      */
     public function index()
     {
-        $suscribtion = Suscribtion::all();
-        return view('backend.suscribe.index',compact('suscribtion'));
+        
     }
 
     /**

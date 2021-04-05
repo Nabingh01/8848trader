@@ -5,14 +5,29 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\ApplyController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\FirstWeekController;
+use App\Http\Controllers\FourthweekController;
+use App\Http\Controllers\InboxApplyController;
+use App\Http\Controllers\InboxController;
+use App\Http\Controllers\InboxSubscribeController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NoticeController;
+use App\Http\Controllers\ResourceController;
+use App\Http\Controllers\SecondWeekController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SuscribtionController;
+use App\Http\Controllers\ThirdWeekController;
 use App\Http\Controllers\UpCourseController;
 use App\Models\AllCourse;
 use App\Models\Course;
+use App\Models\FirstWeek;
+use App\Models\FourthWeek;
 use App\Models\Notice;
+use App\Models\Resource;
+use App\Models\SecondWeek;
+use App\Models\ThirdWeek;
 use App\Models\UpCourse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -29,12 +44,12 @@ use Illuminate\Support\Facades\Http;
 */
 
 Route::get('/', function () {
-    $response = Http::get("https://fcsapi.com/api-v3/forex/list?type=forex&access_key=njJgtZrs85vkuBU3fNrfSn");
+    // $response = Http::get("https://financialmodelingprep.com/api/v3/fx?apikey=dc7cd28c7d105e037b79e74239c31f0a");
  
-    $data =  $response->json()['response'];
-    // // return $data[0]['name'];
+    // $data =  $response->json()['response'];
+    // // return $data[0]['name'];s
     $notice = Notice::all();
-    return view('frontend.pages.index',compact('notice','data'));
+    return view('frontend.pages.index',compact('notice'));
 });
 
 // p
@@ -62,6 +77,15 @@ Route::get('apply',function(){
     return view('frontend.pages.applynow' ,compact('allcourse'));
 });
 
+// clients login
+Route::get('/registration',function(){
+    return view('frontend.pages.clientslogin.register');
+});
+Route::get('/material',function(){
+    $resource = Resource::all();
+    return view('frontend.pages.resource',compact('resource'));
+});
+
 Auth::routes(); 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -86,4 +110,25 @@ Route::resource('notice',NoticeController::class);
 Route::get('registeradmin',function(){
     return view('backend.register.create');
 });
+// inbox message
+Route::resource('inbox',InboxController::class);
+// inbox subscribe
+Route::resource('inboxsubscribe',InboxSubscribeController::class);
+//inbox apply
+Route::resource('inboxapply',InboxApplyController::class);
+// resource Controller
+Route::resource('resources',ResourceController::class);
+// 
+Route::resource('permitcourse',StudentController::class);
+// 
+Route::resource('firstweek',FirstWeekController::class);
+// 
+Route::resource('secondweek',SecondWeekController::class);
+// 
+Route::resource('thirdweek',ThirdWeekController::class);
+// 
+Route::resource('fourthweek',FourthweekController::class);
 });
+Route::get('signup',[ClientController::class,'create']);
+Route::post('signup',[ClientController::class,'store']);
+

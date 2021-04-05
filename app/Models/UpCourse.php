@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class UpCourse extends Model
 {
     use HasFactory;
-    public function allcourse()
+    public function course()
     {
-        return $this->belongsTo(AllCourse::class);
+        return $this->belongsTo(Course::class);
     }
 }

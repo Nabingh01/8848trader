@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -33,8 +33,8 @@
                                 <tr>
                                     <td>{{ $apply->id }}</td>
                                     <td>{{ $apply->name }}</td>
-                                    <td>{{ $apply->contact }}</td>
-                                    <td>{{ $apply->email}}</td>
+                                    <td><a href="tel:{{ $apply->contact }}">{{ $apply->contact }}</a></td>
+                                    <td><a href="mail:{{ $apply->email}}">{{ $apply->email}}</a></td>
                                     <td>{{ $apply->allcourse->name}}</td>
                                 </tr>
                                 @endforeach

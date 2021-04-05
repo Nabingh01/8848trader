@@ -27,8 +27,8 @@ class UpCourseController extends Controller
      */
     public function create()
     {
-        $allcourse =AllCourse::all();
-        return view('backend.upcommingclasses.create',compact('allcourse'));
+        $course=Course::all();
+        return view('backend.upcommingclasses.create',compact('course'));
     }
 
     /**

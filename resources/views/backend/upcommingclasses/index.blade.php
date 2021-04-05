@@ -40,7 +40,7 @@
                                 @foreach ($upcourse as $upcourse)
                                 <tr>
                                     <td>{{ $upcourse->id }}</td>
-                                    <td>{{ $upcourse->allcourse->name }}</td>
+                                    <td>{{ $upcourse->course->name }}</td>
                                     <td>{{ $upcourse->date }}</td>
                                     <td>
                                         <form action="/upcourses/{{ $upcourse->id }}" method="post">

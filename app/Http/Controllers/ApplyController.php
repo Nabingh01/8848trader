@@ -15,8 +15,7 @@ class ApplyController extends Controller
      */
     public function index()
     {
-        $apply =Apply::all();
-        return view('backend.applynow.index',compact('apply'));
+        
     }
 
     /**

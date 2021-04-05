@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -22,14 +22,10 @@
                     <form action="/courses" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label for="allcourse_id">Course</label>
-                            <select id="allcourse_id" class="form-control" name="allcourse_id">
-                                @foreach ($allcourse as $allcourse)
-                                    <option value="{{ $allcourse->id }}">{{ $allcourse->name }}</option>
-                                @endforeach
-                            </select>
+                            <label for="name"> Course Name <span class="text-danger">*</span></label>
+                            <input id="name" class="form-control" type="text" name="name" value="{{ old('name') }}">
                         </div>
-                        @error('course_id')
+                        @error('name')
                         <p class="text-danger">{{ $message }}</p>
                         @enderror
                         <div class="form-group">

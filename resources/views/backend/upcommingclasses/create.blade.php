@@ -24,8 +24,8 @@
                         <div class="form-group">
                             <label for="allcourse_id">Course</label>
                             <select id="allcourse_id" class="form-control" name="allcourse_id">
-                                @foreach ($allcourse as $allcourse)
-                                    <option value="{{ $allcourse->id }}">{{ $allcourse->name }}</option>
+                                @foreach ($course as $course)
+                                    <option value="{{ $course->id }}">{{ $course->name }}</option>
                                 @endforeach
                             </select>
                         </div>

@@ -9,7 +9,7 @@
 
       {{-- about session --}}
       <div>
-          <div class="container py-3">
+          <div class="container py-3 ">
               <h4>Real Community for <i><span class="text-danger">Realistic Traders</span></i></h4>
               <hr class="solid">
               <div class="row py-3">
@@ -57,7 +57,7 @@
                         <i class="fas fa-caret-right"></i> Entries, exits, and full analysis <br>
                         <i class="fas fa-caret-right"></i> 0-3 trades shared per trading day <br>
                         <i class="fas fa-caret-right"></i> View trades from our team of traders <br>
-                        <i class="fas fa-caret-right"></i> Our analysts are thoroughly screened, usually FTMO funded or myfxbook verified
+                        <i class="fas fa-caret-right"></i> Our analysts are thoroughly screened
                       </p>
                   </div>
               </div>
@@ -72,7 +72,7 @@
                 <div class="col-md-8">
                     <h4 class="text-danger">TRAINING MATERIAL</h4>
                     <p>
-                      <i class="fas fa-caret-right"></i> Live webinars with Joe Barrecca <br>
+                      <i class="fas fa-caret-right"></i> Live webinars <br>
                       <i class="fas fa-caret-right"></i> Educational Library <br>
                       <i class="fas fa-caret-right"></i> Strategy Library <br>
                       <i class="fas fa-caret-right"></i> Trade Examples & Breakdowns

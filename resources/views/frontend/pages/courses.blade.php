@@ -15,7 +15,7 @@
                         </div>
                         {{-- "description" --}}
                         <div class="col-md-6">
-                            <h3>{{ $course->allcourse->name }}</h3>
+                            <h3>{{ $course->name }}</h3>
                             <p>{{ $course->description }}</p>
                         </div>
                         <hr class="solid">
@@ -31,7 +31,7 @@
                     @foreach ($upcomming as $upcomming)
                     <div class="card" style="">
                         <div class="card-body">
-                          <h5 class="card-title">{{ $upcomming->allcourse->name }}</h5>
+                          <h5 class="card-title">{{ $upcomming->course->name }}</h5>
                           <h6 class="card-subtitle mb-2 text-muted">Startingfrom:{{ $upcomming->date }}</h6>
                           <a href="/apply" class="card-link btn btn-danger btn-sm">Apply now</a>
                         </div>

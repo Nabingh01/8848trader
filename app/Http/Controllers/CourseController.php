@@ -26,8 +26,8 @@ class CourseController extends Controller
      */
     public function create()
     {
-        $allcourse = AllCourse::all();
-        return view('backend.course.create',compact('allcourse'));
+        $course = Course::all();
+        return view('backend.course.create',compact('course'));
     }
 
     /**
@@ -44,7 +44,7 @@ class CourseController extends Controller
             'image'=>'required',
         ]);
         $course = new Course();
-        $course->allcourse_id=$request->allcourse_id;
+        $course->name=$request->name;
         $course->fee=$request->fee;
         $course->description=$request->description;
          if($request->hasFile('image')){

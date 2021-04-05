@@ -11,9 +11,9 @@
   </head>
   <body>
     {{-- suscribe --}}
-    <div>
+    <div style="background-color: #f8f5f1">
         <div class="container d-flex flex-column justify-content-center align-items-center">
-            <a href="" class="text-center"><img src="../images/newlogo.png" alt="" style="width: 10rem; height: 10rem;"></a>
+            <a href="" class="text-center"><img src="../images/8848logo.png" alt="" style="width: 10rem; height: 10rem;"></a>
             <div class="container text-center text-md-left ">
                 <p style="font-family: 'Crimson Text', serif; font-size: 1.5rem">Sign up to receive emails from the 8848 Trading Community! <br>
                     Select your interests below.</p>

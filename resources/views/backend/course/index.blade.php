@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -41,7 +41,7 @@
                                 @foreach ($course as $course)
                                 <tr>
                                     <td>{{ $course->id }}</td>
-                                    <td>{{ $course->allcourse->name }}</td>
+                                    <td>{{ $course->name }}</td>
                                     <td>{{ $course->fee }}</td>
                                     <td>{{ $course->description }}</td>
                                     <td>
