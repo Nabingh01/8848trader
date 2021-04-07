@@ -29,16 +29,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
+      @if (Auth::user()->is_admin == 9)
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      @else
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      @endif
+      <li class="nav-item d-none d-sm-inline-block">
+        <a class="nav-link" href="/ourcourse" style="font-family: 'Crete Round', serif;">Our Courses</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a class="nav-link" href="/home" style="font-family: 'Crete Round', serif;">Resource</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/contact" class="nav-link">Contact</a>
       </li>
     </ul>
 
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
+    {{-- <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
@@ -47,17 +59,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </button>
         </div>
       </div>
-    </form>
+    </form> --}}
   </nav>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
+    @if (Auth::user()->is_admin == 9)
     <a href="/home" class="brand-link">
       <img src="{{asset('images/8848logo.png')}}" alt="8848Trader Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">8848 Trader</span>
     </a>
+    @else
+    <a href="/" class="brand-link">
+      <img src="{{asset('images/8848logo.png')}}" alt="8848Trader Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">8848 Trader</span>
+    </a> 
+    @endif
+    
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -88,16 +108,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+               @if (Auth::user()->is_admin == 9)
                <li class="nav-item">
-            <a href="/home" class="nav-link">
-              <i class="fas fa-chart-line"></i>
+                <a href="/home" class="nav-link">
+                  <i class="fas fa-chart-line"></i>
+                  <p>
+                   Dashboard
+                    <span class="right badge badge-danger"></span>
+                  </p>
+                </a>
+              </li>
+               @endif
+          @if (Auth::user()->is_admin == 9)
+          <li class="nav-item">
+            <a href="/students" class="nav-link">
+              <i class="fas fa-users"></i>
               <p>
-               Dashboard
+                Students
                 <span class="right badge badge-danger"></span>
               </p>
             </a>
           </li>
-          @if (Auth::user()->is_admin == 1)
+          @endif
+          @if (Auth::user()->is_admin == 9)
+          <li class="nav-item">
+            <a href="/permitcourse" class="nav-link">
+              <i class="fas fa-unlock"></i>
+              <p>
+                UnlockCourse
+                <span class="right badge badge-danger"></span>
+              </p>
+            </a>
+          </li>
+          @endif
+          @if (Auth::user()->is_admin == 9)
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-graduation-cap"></i>
@@ -137,8 +181,56 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           @endif
-          
-          @if (Auth::user()->is_admin == 1)
+          @if (Auth::user()->is_admin== 9)
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-book"></i>
+              <p>
+               Weekly content
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/firstweek/create" class="nav-link">
+                  <i class="fas fa-book"></i>
+                  <p>
+                   First Week 
+                    <span class="right badge badge-danger"></span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/secondweek/create" class="nav-link">
+                  <i class="fas fa-book"></i>
+                  <p>
+                    Second Week
+                    <span class="right badge badge-danger"></span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/thirdweek/create" class="nav-link">
+                  <i class="fas fa-book"></i>
+                  <p>
+                    Third Week
+                    <span class="right badge badge-danger"></span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/fourthweek/create" class="nav-link">
+                  <i class="fas fa-book"></i>
+                  <p>
+                    Fourth Week
+                    <span class="right badge badge-danger"></span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </li>    
+          @endif
+          @if (Auth::user()->is_admin == 9)
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-inbox"></i>
@@ -178,19 +270,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           @endif
-
-          @if (Auth::user()->is_admin == 1)
-          <li class="nav-item">
-            <a href="/resources" class="nav-link">
-              <i class="fas fa-exclamation"></i>
-              <p>
-                Resource
-                <span class="right badge badge-danger"></span>
-              </p>
-            </a>
-          </li>
-          @endif
-          @if (Auth::user()->is_admin == 1)
+          @if (Auth::user()->is_admin == 9)
           <li class="nav-item">
             <a href="/notice" class="nav-link">
               <i class="fas fa-exclamation"></i>
@@ -201,7 +281,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           @endif
-          @if (Auth::user()->is_admin == 1)
+          @if (Auth::user()->is_admin == 9)
           <li class="nav-item">
             <a href="/registeradmin" class="nav-link">
               <i class="fas fa-registered"></i>
@@ -214,15 +294,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
           @endif
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-graduation-cap"></i>
+              <i class="fas fa-book"></i>
               <p>
-                Forex
+                Weekly Content
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/allcourses" class="nav-link">
+                <a href="/firstweek" class="nav-link">
                   <i class="fas fa-book"></i>
                   <p>
                    First Week 
@@ -231,7 +311,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/courses" class="nav-link">
+                <a href="/secondweek" class="nav-link">
                   <i class="fas fa-book"></i>
                   <p>
                     Second Week
@@ -240,7 +320,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/upcourses" class="nav-link">
+                <a href="/thirdweek" class="nav-link">
                   <i class="fas fa-book"></i>
                   <p>
                     Third Week
@@ -249,7 +329,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/upcourses" class="nav-link">
+                <a href="/fourthweek" class="nav-link">
                   <i class="fas fa-book"></i>
                   <p>
                     Fourth Week
@@ -304,10 +384,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Anything you want
+      <img src="{{ asset('images/8848logo.png') }}" width="60" alt="">
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">8848 Trading</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">8848 Trader</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->

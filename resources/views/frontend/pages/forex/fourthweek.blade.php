@@ -1,6 +1,37 @@
 @extends('backend.app')
 @section('content')
-    <div>
-        
+@if (Auth::user()->is_admin>4)
+<div>
+    @foreach ($fourthweek as $fourthweek)
+    @if (Auth::user()->is_admin == 9)
+    <form action="/fourthweek/{{ $fourthweek->id }}" method="post">
+        @csrf
+        @method('delete')
+        <a href="/fourthweek/{{ $fourthweek->id }}/edit" class="btn btn-sm btn-primary">
+            <i class="fas fa-edit"></i>
+            edit
+        </a>
+        <button type="submit" class="btn btn-danger btn-sm">
+            <i class="fas fa-trash-alt"></i>
+            Delete
+        </button>
+        </form>
+    @endif
+    <div class="container d-flex flex-column justify-content-center align-items-center py-5">
+        <h2>{{ $fourthweek->name }}</h2>
+    </div>  
+    <div class="container">
+        <p>{!! $fourthweek->description !!}</p>
     </div>
+    @endforeach
+</div>
+@else
+    <div class="container text-center ">
+        <p class="text-danger" style="font-size: 2rem;">Oops  <i class="fas fa-exclamation"></i></p>
+        <p class="text-danger"> You have not joined our company <br>
+            <h2 class="text-danger">Or</h2>
+            <span class="text-danger">You have not cleared your fourth installment.</span>
+        </p>
+    </div>
+@endif
 @endsection

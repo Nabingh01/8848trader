@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+@if (Auth::user()->is_admin == 9)
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-12">
@@ -23,6 +24,7 @@
                                 <th>#</th>
                                 <th>First_Name</th>
                                 <th>Last_Name</th>
+                                <th>Country</th>
                                 <th>contact</th>
                                 <th>Email</th>
                                 <th>interested course</th>
@@ -34,6 +36,7 @@
                                     <td>{{ $suscribtion->id }}</td>
                                     <td>{{ $suscribtion->fname }}</td>
                                     <td>{{ $suscribtion->lname }}</td>
+                                    <td>{{ $suscribtion->country }}</td>
                                     <td><a href="tel:{{ $suscribtion->contact }}">{{ $suscribtion->contact }}</a></td>
                                     <td><a href="mailto:{{ $suscribtion->email}}">{{ $suscribtion->email}}</a></td>
                                     <td>{{ $suscribtion->allcourse->name}}</td>
@@ -46,4 +49,5 @@
         </div>
     </div>
 </div>
+@endif
 @endsection

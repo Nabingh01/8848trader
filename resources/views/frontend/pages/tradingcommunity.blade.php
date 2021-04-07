@@ -3,31 +3,31 @@
     {{-- banner --}}
     <div id="hero" class="d-flex flex-column justify-content-center align-items-center py-5 mt-4" style="background-attachment: fixed; height: 15vh">
         <div class="container text-center text-md-left ">
-          <h1>Our <span class="text-danger">Community</span></h1>
+          <h1>Our <span style="color: yellow">Community</span></h1>
         </div>
       </div> 
 
       {{-- about session --}}
       <div>
           <div class="container py-3 ">
-              <h4>Real Community for <i><span class="text-danger">Realistic Traders</span></i></h4>
+              <h2>Real Community for <i><span class="text-danger">Realistic Traders</span></i></h2>
               <hr class="solid">
               <div class="row py-3">
                   <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../images/admin1.jpg" class="card-img-top" alt="...">
+                    <div class="card" style="width: 15rem;">
+                        <img src="../images/sushant.png" class="card-img-top" alt="...">
                       </div>
                   </div>
                   {{-- 2 --}}
                   <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../images/admin2.jpg" class="card-img-top" alt="...">
+                    <div class="card" style="width: 15rem;">
+                        <img src="../images/pravin.png" class="card-img-top" alt="...">
                       </div>
                   </div>
                   {{-- 3 --}}
                   <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../images/admin3.jpg" class="card-img-top" alt="...">
+                    <div class="card" style="width: 15rem;">
+                        <img src="../images/saugat.png" class="card-img-top" alt="...">
                       </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
               </p>
           </div>
           <div class="container py-3">
-              <h4>Here's <i><span class="text-danger">What's Inside</span></i></h4>
+              <h2>Here's <i><span class="text-danger">What's Inside</span></i></h2>
               <hr class="solid">
               <div class="row py-3">
                   <div class="col-md-4">
@@ -92,7 +92,7 @@
                     <p>
                       <i class="fas fa-caret-right"></i> Friendly chatrooms <br>
                       <i class="fas fa-caret-right"></i> Helpful members & moderators <br>
-                      <i class="fas fa-caret-right"></i> Members from 100+ countries globally <br>
+                      <i class="fas fa-caret-right"></i> Members from all around the world<br>
                       <i class="fas fa-caret-right"></i> Trade Ideas from experienced members
                     </p>
                 </div>

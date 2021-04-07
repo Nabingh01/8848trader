@@ -43,7 +43,7 @@ class UpCourseController extends Controller
              'date'=>'required',
          ]);
          $upcourse = new UpCourse();
-         $upcourse->allcourse_id=$request->allcourse_id;
+         $upcourse->course_id=$request->course_id;
          $upcourse->date=$request->date;
           $upcourse->save();
           $request->session()->flash('message','record saved');
@@ -86,7 +86,7 @@ class UpCourseController extends Controller
              'up_date'=>'required',
          ]);
          $upcourse =  UpCourse::find($id);
-         $upcourse->allcourse_id=$request->allcourse_id;
+         $upcourse->course_id=$request->course_id;
          $upcourse->date=$request->date;
           $upcourse->update();
           $request->session()->flash('message','record updated');

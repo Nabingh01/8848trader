@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FirstWeek;
+use App\Models\FourthWeek;
 use Illuminate\Http\Request;
 
 class FirstWeekController extends Controller
@@ -67,7 +68,8 @@ class FirstWeekController extends Controller
      */
     public function edit($id)
     {
-        //
+        $firstweek = FirstWeek::find($id);
+        return view('backend.forex.firstweekedit',compact('firstweek'));
     }
 
     /**
@@ -79,7 +81,16 @@ class FirstWeekController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=$request->validate([
+            'name'=>'required',
+            'description'=>'required', 
+        ]);
+        $firstweek = FirstWeek::find($id);
+        $firstweek->name=$request->name;
+        $firstweek->description=$request->description;
+        $firstweek->update();
+        $request->session()->flash('message','record updated');
+        return redirect()->back();
     }
 
     /**
@@ -88,8 +99,11 @@ class FirstWeekController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $firstweek = FirstWeek::find($id);
+        $firstweek->delete();
+        $request->session()->flash('message','record updated');
+        return redirect()->back();
     }
 }

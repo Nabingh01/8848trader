@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AllCourseController;
+use App\Http\Controllers\AllStudentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
@@ -81,11 +82,6 @@ Route::get('apply',function(){
 Route::get('/registration',function(){
     return view('frontend.pages.clientslogin.register');
 });
-Route::get('/material',function(){
-    $resource = Resource::all();
-    return view('frontend.pages.resource',compact('resource'));
-});
-
 Auth::routes(); 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -116,18 +112,17 @@ Route::resource('inbox',InboxController::class);
 Route::resource('inboxsubscribe',InboxSubscribeController::class);
 //inbox apply
 Route::resource('inboxapply',InboxApplyController::class);
-// resource Controller
-Route::resource('resources',ResourceController::class);
 // 
 Route::resource('permitcourse',StudentController::class);
-// 
-Route::resource('firstweek',FirstWeekController::class);
-// 
-Route::resource('secondweek',SecondWeekController::class);
-// 
-Route::resource('thirdweek',ThirdWeekController::class);
-// 
-Route::resource('fourthweek',FourthweekController::class);
+    Route::resource('firstweek',FirstWeekController::class);
+    // 
+    Route::resource('secondweek',SecondWeekController::class);
+    // 
+    Route::resource('thirdweek',ThirdWeekController::class);
+    // 
+    Route::resource('fourthweek',FourthweekController::class);
+    //allstudents
+    Route::resource('students',AllStudentController::class);
 });
 Route::get('signup',[ClientController::class,'create']);
 Route::post('signup',[ClientController::class,'store']);

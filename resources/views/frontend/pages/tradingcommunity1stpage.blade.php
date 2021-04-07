@@ -16,7 +16,7 @@
                                 - See our trades & analysis <br>
                                 - Live webinars + education <br>
                             </p>
-                            <a href=" /tradingcommunity" class="btn btn-danger btn-sm">Learn More</a>
+                            <a href=" /indicescommunity" class="btn btn-danger btn-sm">Learn More</a>
                         </div>
                         <div class="col-md-4 py-3 bg-danger">
                             <h3  class="text-white">Stock Market Community</h3>

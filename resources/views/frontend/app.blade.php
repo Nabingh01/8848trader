@@ -70,7 +70,7 @@
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container">
-            <a class="navbar-brand" href="/"><img src="{{ asset('images/8848logo.png') }}" width="80" alt=""> <strong style="font-family: 'Crete Round', serif;">8848 Traders</strong></a>
+            <a class="navbar-brand" href="/"><img src="{{ asset('images/8848logo.png') }}" width="100" alt=""> <strong style="font-family: 'Crete Round', serif;">8848 Trader</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -92,17 +92,41 @@
                   <a class="nav-link" href="/ourcourse" style="font-family: 'Crete Round', serif;">Our Courses</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/material" style="font-family: 'Crete Round', serif;">Resources</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="/contact" style="font-family: 'Crete Round', serif;">Contact</a>
                 </li>
+                @if (Auth::user())
                 <li class="nav-item">
-                  <a class="nav-link text-danger" href="/login" style="font-family: 'Crete Round', serif;">SignIn</a>
+                  <a class="nav-link" href="/home" style="font-family: 'Crete Round', serif;">Resource</a>
                 </li>
+                <li>
+                  <img src="{{asset('images/8848logo.png')}}" class="img-circle elevation-2" alt="User Image" style="width: 40px">
+                </li>
+                {{-- <li>
+                  <a href="#" class="nav-link">{{Auth()->user()->name}}</a>
+                </li> --}}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Crete Round', serif;">
+                    {{Auth()->user()->name}}
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
+                  </ul>
+                </li>
+                @else
                 <li class="nav-item">
-                  <a class="nav-link text-danger" href="/signup" style="font-family: 'Crete Round', serif;">Signup</a>
+                  <a class="nav-link text-danger " href="/login" style="font-family: 'Crete Round', serif;">SignIn</a>
                 </li>
+                @endif
             </div>
           </div>
         </nav>
@@ -117,41 +141,40 @@
               <strong class="text-danger">Need help?</strong> Chat with our representative
             </div>`
             <div>
-              <a href="/contact" class="btn btn-danger btn-sm">Chat Now</a>
+              <a href="/contact" class="btn btn-danger btn-sm">Chat Now <i class="far fa-comment-dots" style="font-size: 20px"></i> </a>
             </div>
         </div>
       </div>
     </div>
 
-    <div>
-      <div class="container">
+    <div class="py-5" style="background-color: #ec4646">
+      <div class="container text-white" >
         <div class="row">
           <div class="col-md-4">
             <h1>Quicks Links</h1>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/stockmarketcommunity">Our Community</a></li>
-              <li><a href="/courses">Our Courses</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a class="text-white" href="/">Home</a></li>
+              <li><a class="text-white" href="/stockmarketcommunity">Our Community</a></li>
+              <li><a class="text-white" href="/courses">Our Courses</a></li>
+              <li><a class="text-white" href="/contact">Contact</a></li>
             </ul>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6 ">
            <h1>Contact us</h1>
            <ul>
-             <li>Prithvi Path, Dharan</li>
-             <li><a href="Tel: 025-525164">Tel: 025-525164</a></li>
-             <li><a href="mailto: info@8848trading.com">Email: info@8848trading.com</a></li>
+             <a class="text-white" href=""><li>15 Isla Ave, <br>Glenroy, VIC 3046, Australia</li></a>
+             <li><a class="text-white" href="Tel: +61 450 864 242">Tel: +61 450 864 242</a></li>
+             <li><a class="text-white" href="mailto: info@8848trading.com">Email: info@8848trading.com</a></li>
            </ul>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-2">
             <h1>Social</h1>
-            <a href="https://www.facebook.com/8848trader/"><i class="fab fa-facebook" style="font-size: 2rem"></i></a>
-            <a href="https://www.instagram.com/8848_trader/?igshid=9g27wbgrqd1r&fbclid=IwAR3O1Rk1FQLbt68vbsyhwI-xBhaj6Ml49sLebrJ_Ml1z1g6UQHKVy-oulwU"><i class="fab fa-instagram" style="font-size: 2rem;color: blue ; color:  #9b3675"></i></a>
-            <a href=""><i class="fab fa-telegram" style="font-size: 2rem;"></i></a>
-            <a href=""><i class="fab fa-twitter" style="font-size: 2rem;"></i></a>
-            <a href=""><i class="fab fa-discord" style="font-size: 2rem;"></i></a>
+            <a class="text-white" href="https://www.facebook.com/8848trader/" target="_blank"><i class="fab fa-facebook" style="font-size: 1.2rem;"></i></a>
+            <a class="text-white" href="https://www.instagram.com/8848_trader/?igshid=9g27wbgrqd1r&fbclid=IwAR3O1Rk1FQLbt68vbsyhwI-xBhaj6Ml49sLebrJ_Ml1z1g6UQHKVy-oulwU" target="_blank"><i class="fab fa-instagram" style="font-size: 1.2rem;"></i></a>
+            <a class="text-white" href=""><i class="fab fa-twitter" style="font-size: 1.2rem;"></i></a>
+            <a class="text-white" href="https://discord.com/invite/FdG2MTgmku" target="_blank"><i class="fab fa-discord" style="font-size: 1.2rem;"></i></a>
 
           </div>
         </div>

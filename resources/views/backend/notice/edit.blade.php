@@ -8,6 +8,7 @@
     Notice
 @endsection
 @section('content')
+@if (Auth::user()->is_admin == 9)
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-12">
@@ -45,4 +46,5 @@
         </div>
     </div>
 </div>
+@endif
 @endsection

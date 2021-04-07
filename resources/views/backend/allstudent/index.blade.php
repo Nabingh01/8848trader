@@ -1,11 +1,11 @@
 @extends('backend.app')
 
 @section('title')
-    Course
+    index
 @endsection
 
 @section('location')
-    course
+    index
 @endsection
 
 @section('content')
@@ -13,16 +13,21 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-12">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link btn btn-primary btn-sm" href="/permitcourse">UnlockCourse</a>
+                </li>
+              </ul>
             <div class="card">
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-2">
-                            <a href="/courses/create" class="btn btn-primary btn-sm">
+                            <a href="/students/create" class="btn btn-primary btn-sm">
                                 <i class="fas fa-plus"></i>
-                                New courses</a>
+                                New Student</a>
                         </div>
                         <div class="col-md-8">
-                            <h1 class="text-center">Courses</h1>
+                            <h1 class="text-center">All Students</h1>
                         </div>
                     </div>
                 </div>
@@ -32,24 +37,36 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>fee</th>
-                                <th>description</th>
+                                <th>Contact</th>
+                                <th>email</th>
+                                <th>Course</th>
+                                <th>Country</th>
+                                <th>First Installment</th>
+                                <th>Second Installment</th>
+                                <th>Third Installment</th>
+                                <th>Fourth Installment</th>
                                 <th>Action</th>
     
                             </tr>
                         </thead>
                         <tbody>
-                                @foreach ($course as $course)
+                                @foreach ($students as $students)
                                 <tr>
-                                    <td>{{ $course->id }}</td>
-                                    <td>{{ $course->name }}</td>
-                                    <td>{{ $course->fee }}</td>
-                                    <td>{{ $course->description }}</td>
+                                    <td>{{ $students->id }}</td>
+                                    <td>{{ $students->name }}</td>
+                                    <td>{{ $students->contact }}</td>
+                                    <td>{{ $students->email }}</td>
+                                    <td>{{ $students->course }}</td>
+                                    <td>{{ $students->country }}</td>
+                                    <td>{{ $students->firstinstallment }}</td>
+                                    <td>{{ $students->secondinstallment }}</td>
+                                    <td>{{ $students->thirdinstallment }}</td>
+                                    <td>{{ $students->fourthinstallment }}</td>
                                     <td>
-                                        <form action="/courses/{{ $course->id }}" method="post">
+                                        <form action="/students/{{ $students->id }}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <a href="/courses/{{ $course->id }}/edit" class="btn btn-sm btn-primary">
+                                        <a href="/students/{{ $students->id }}/edit" class="btn btn-sm btn-primary">
                                             <i class="fas fa-edit"></i>
                                             edit
                                         </a>

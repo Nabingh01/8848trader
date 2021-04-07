@@ -1,6 +1,7 @@
 @extends('backend.app')
 
 @section('content')
+@if (Auth::user()->is_admin == 9)
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -74,4 +75,5 @@
         </div>
     </div>
 </div>
+@endif
 @endsection

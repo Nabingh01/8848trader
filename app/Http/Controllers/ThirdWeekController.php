@@ -15,7 +15,7 @@ class ThirdWeekController extends Controller
     public function index()
     {
         $thirdweek = ThirdWeek::all();
-        return view('frontend.pages.forex.thirdweek',compact('thirdWeek'));
+        return view('frontend.pages.forex.thirdweek',compact('thirdweek'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ThirdWeekController extends Controller
      */
     public function create()
     {
-        return view('backend.forx.thirdweek');
+        return view('backend.forex.thirdweek');
     }
 
     /**
@@ -67,7 +67,8 @@ class ThirdWeekController extends Controller
      */
     public function edit($id)
     {
-        //
+        $thirdweek = ThirdWeek::find($id);
+        return view('backend.forex.thirdweekedit',compact('thirdweek'));
     }
 
     /**
@@ -79,7 +80,16 @@ class ThirdWeekController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=$request->validate([
+            'name'=>'required',
+            'description'=>'required', 
+        ]);
+        $thirdweek = ThirdWeek::find($id);
+        $thirdweek->name=$request->name;
+        $thirdweek->description=$request->description;
+        $thirdweek->update();
+        $request->session()->flash('message','record updated');
+        return redirect()->back();
     }
 
     /**
@@ -88,8 +98,11 @@ class ThirdWeekController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $thirdweek = ThirdWeek::find($id);
+        $thirdweek->delete();
+        $request->session()->flash('message','record updated');
+        return redirect()->back();
     }
 }

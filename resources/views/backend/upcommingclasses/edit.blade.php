@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+@if (Auth::user()->is_admin == 9)
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -23,8 +24,8 @@
                         @csrf
                         @method('put')
                        <div class="form-group">
-                           <label for="allcourse_id">Course Name</label>
-                           <input id="allcourse_id" class="form-control" type="text" name="allcourse_id" value="{{ $upcourse->course->name }}">
+                           <label for="course_id">Course Name</label>
+                           <input id="course_id" class="form-control" type="text" name="course_id" value="{{ $upcourse->course->name }}">
                        </div>
                         @error('allcourse_id')
                         <p class="text-danger">{{ $message }}</p>
@@ -52,5 +53,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
+@endif
 @endsection

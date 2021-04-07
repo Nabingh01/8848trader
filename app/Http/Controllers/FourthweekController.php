@@ -67,7 +67,8 @@ class FourthweekController extends Controller
      */
     public function edit($id)
     {
-        //
+        $fourthweek = FourthWeek::find($id);
+        return view('backend.forex.fourthweekedit',compact('fourthweek'));
     }
 
     /**
@@ -79,7 +80,16 @@ class FourthweekController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=$request->validate([
+            'name'=>'required',
+            'description'=>'required', 
+        ]);
+        $fourthweek = FourthWeek::find($id);
+        $fourthweek->name=$request->name;
+        $fourthweek->description=$request->description;
+        $fourthweek->update();
+        $request->session()->flash('message','record updated');
+        return redirect()->back();
     }
 
     /**
@@ -88,8 +98,11 @@ class FourthweekController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $fourthweek = FourthWeek::find($id);
+        $fourthweek->delete();
+        $request->session()->flash('message','record updated');
+        return redirect()->back();
     }
 }

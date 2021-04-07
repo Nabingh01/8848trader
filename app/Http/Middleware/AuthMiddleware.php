@@ -17,12 +17,9 @@ class AuthMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth()->user()->is_admin ==1) {
+        if (Auth::check() && Auth()->user()) {
             return $next($request);
       
-        }else if(Auth::check() && Auth()->user()->is_admin ==0){
-            return view('frontend.pages.resource');
-
         }
         else{
             return redirect('/');

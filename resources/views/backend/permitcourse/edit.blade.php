@@ -19,24 +19,25 @@
                     Back</a>
                 </div>
                 <div class="card-body">
-                    <form action="/permitcourse/{{ $permit->id }}" method="post" enctype="multipart/form-data">
+                    <form action="/permitcourse/{{ $user->id }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('put')
-                       <div class="form-group">
-                           <label for="">{{ $permit->name }}</label>
-                       </div>
-                       <div class="form-group">
-                           <label for="email">email</label>
-                           <input id="email" class="form-control" type="text" name="email" value="{{ $permit->email }}">
-                       </div>
+                        <div class="form-group">
+                            <label for="name">Name<span class="text-danger">*</span></label>
+                            <input id="name" class="form-control" type="text" name="name" value="{{ $user->name }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Name<span class="text-danger">*</span></label>
+                            <input id="email" class="form-control" type="text" name="email" value="{{ $user->email }}">
+                        </div>
                        <div class="form-group">
                            <label for="is_admin">is_admin</label>
                            <select id="is_admin" class="form-control" name="is_admin">
-                               <option>{{ $permit->is_admin }}</option>
-                               <option>2</option>
-                               <option>3</option>
-                               <option>4</option>
-                               <option>5</option>
+                               <option value="0">user</option>
+                               <option value="2">Unlock first week</option>
+                               <option value="3">Unlock second week</option>
+                               <option value="4">Unlock third week</option>
+                               <option value="5">Unlock fourth week</option>
                            </select>
                        </div>
                         <button type="submit" class="btn btn-primary btn-sm">

@@ -3,7 +3,7 @@
     <div  style="background-color: #f8f5f1">
         <div id="hero" class="d-flex flex-column justify-content-center align-items-center mt-4 py-5" style="height: 10vh">
             <div class="container d-flex flex-column justify-content-center align-items-center ">
-              <h1 style="font-size: 2rem"><span class="text-danger">Contact</span> us</h1>
+              <h1 style="font-size: 2rem"><span  style="color: yellow">Contact</span> us</h1>
             </div>
           </div> 
           {{--  --}}
@@ -47,9 +47,9 @@
                   <div class="col-md-6 py-5">
                       <h4>Prefer to instant <span class="text-danger"><i>message</i></span> us?</h4>
                       <p>Send us a message on Facebook:</p>
-                      <a href="https://www.facebook.com/8848trader/" class="btn btn-primary ">Contact on facebook</a>
+                      <a href="https://www.facebook.com/8848trader/" class="btn btn-primary " target="_blank">Contact on facebook</a>
                       <p>Send us a message on instagram:</p>
-                      <a href="https://www.instagram.com/8848_trader/?igshid=9g27wbgrqd1r&fbclid=IwAR3O1Rk1FQLbt68vbsyhwI-xBhaj6Ml49sLebrJ_Ml1z1g6UQHKVy-oulwU" class="btn btn-success " style="background-color: #9b3675;"> Contact on Instagram</a>
+                      <a href="https://www.instagram.com/8848_trader/?igshid=9g27wbgrqd1r&fbclid=IwAR3O1Rk1FQLbt68vbsyhwI-xBhaj6Ml49sLebrJ_Ml1z1g6UQHKVy-oulwU" class="btn btn-success " style="background-color: #9b3675;" target="_blank"> Contact on Instagram</a>
                       <p><h4>Teaching hours:</h4>We are in office Monday-Friday, 9:00AM-4:00PM, US EST. Please allow us up to 1-2 business days to get back to your question.</p>
                   </div>
               </div>

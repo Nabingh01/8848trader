@@ -9,17 +9,14 @@
 @endsection
 
 @section('content')
+@if (Auth::user()->is_admin == 9)
 <div class="container mt-4">
+    <h4>Second Week</h4>
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
-                   <a href="/secondWeek" class="btn btn-sm btn-primary">
-                    <i class="fas fa-arrow-circle-left"></i>
-                    Back</a>
-                </div>
                 <div class="card-body">
-                    <form action="/secondWeek" method="post" enctype="multipart/form-data">
+                    <form action="/secondweek" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="name"> Subject <span class="text-danger">*</span></label>
@@ -52,4 +49,5 @@
         </div>
     </div>
 </div>
+@endif
 @endsection

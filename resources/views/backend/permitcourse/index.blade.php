@@ -33,17 +33,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                                @foreach ($permit as $key=>$permit)
+                                @foreach ($user as $key=>$user)
                                 <tr>
                                     <td>{{ ++$key }}</td>
-                                    <td>{{ $permit->name }}</td>
-                                    <td>{{ $permit->email }}</td>
-                                    <td>{{ $permit->is_admin }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td><a href="mailto:{{ $user->email }}">{{ $user->email }}</a></td>
+                                    <td>{{ $user->is_admin }}</td>
                                     <td>
-                                        <form action="/permitcourse/{{ $permit->id }}" method="post">
+                                        <form action="/permitcourse/{{ $user->id }}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <a href="/permitcourse/{{ $permit->id }}/edit" class="btn btn-sm btn-primary">
+                                        <a href="/permitcourse/{{ $user->id }}/edit" class="btn btn-sm btn-primary">
                                             <i class="fas fa-edit"></i>
                                             edit
                                         </a>

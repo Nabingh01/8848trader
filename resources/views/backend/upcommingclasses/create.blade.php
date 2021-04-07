@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+@if (Auth::user()->is_admin == 9)
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -22,8 +23,8 @@
                     <form action="/upcourses" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label for="allcourse_id">Course</label>
-                            <select id="allcourse_id" class="form-control" name="allcourse_id">
+                            <label for="course_id">Course</label>
+                            <select id="course_id" class="form-control" name="course_id">
                                 @foreach ($course as $course)
                                     <option value="{{ $course->id }}">{{ $course->name }}</option>
                                 @endforeach
@@ -56,4 +57,5 @@
         </div>
     </div>
 </div>
+@endif
 @endsection

@@ -14,8 +14,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $permit = User::all();
-        return view('backend.permitcourse.index',compact('permit'));
+        $user = User::all();
+        return view('backend.permitcourse.index',compact('user'));
     }
 
     /**
@@ -58,8 +58,8 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        $permit = User::find($id);
-        return view('backend.permitcourse.edit',compact('permit'));
+        $user = User::find($id);
+        return view('backend.permitcourse.edit',compact('user'));
     }
 
     /**
@@ -71,10 +71,11 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $permit = User::find($id);
-        
-        $permit->is_admin=$request->is_admin;
-        $permit->update;
+        $user = User::find($id);
+        $user->name=$request->name;
+        $user->email=$request->email;
+        $user->is_admin=$request->is_admin;
+        $user->update();
         $request->session()->flash('message','record updated');
          return redirect()->back();
     }
