@@ -77,9 +77,7 @@
        <div class="bg-light mt-4">
         <div class="container py-4">
           <div class="row">
-            <div class="col-md-8">
-              <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="card">
                     <img src="images/forex.jpg" class="card-img-top" alt="..." style="max-height: 13rem; min-height: 13rem;">
                     <div class="card-body"style="height: 18rem;">
@@ -89,7 +87,7 @@
                   </div>
                 </div>
                 <!-- Crypto Currency -->
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="card">
                     <img src="images/crypto.jpg" class="card-img-top" alt="..." style="max-height: 13rem; min-height: 13rem;">
                     <div class="card-body" style="height: 18rem;">
@@ -99,7 +97,7 @@
                   </div>
                 </div>
                 <!-- About Forex -->
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="card">
                     <img src="images/stockmarket.jpg" class="card-img-top" alt="..." style="max-height: 13rem; min-height: 13rem;">
                     <div class="card-body" style="height: 18rem;">
@@ -108,35 +106,26 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
             <!-- About Forex -->
-            <div class="col-md-4">
+            <div class="col-md-3">
               <h4>Market Overview</h4>
-              <!-- TradingView Widget BEGIN -->
-                <div class="tradingview-widget-container  ">
-                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/stocks-usa/" rel="noopener" target="_blank"><span class="blue-text">Stock Market Today</span></a> by TradingView</div>
-                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
-                  {
-                  colorTheme: "light";
-                  dateRange: "12M";
-                  exchange: "US";
-                  showChart: true;
-                  locale: "en";
-                  largeChartUrl: "";
-                  isTransparent: false;
-                  showSymbolLogo: false;
-                  plotLineColorGrowing: "rgba(33, 150, 243, 1)";
-                  plotLineColorFalling: "rgba(33, 150, 243, 1)";
-                  gridLineColor: "rgba(240, 243, 250, 1)";
-                  scaleFontColor: "rgba(120, 123, 134, 1)";
-                  belowLineFillColorGrowing: "rgba(33, 150, 243, 0.12)";
-                  belowLineFillColorFalling: "rgba(33, 150, 243, 0.12)";
-                  symbolActiveColor: "rgba(33, 150, 243, 0.12)";
-                }
-                  </script>
-                </div>
-<!-- TradingView Widget END -->
+              <!-- SimpleFX widget MARKET OVERVIEW - START -->
+<div class="sfx-widget" id="sfx-market-overview"></div>
+<script type="text/javascript" src="https://widgets.simplefx.com/sfx-widget.js"></script>
+<script type="text/javascript">
+	sfx('marketOverview', {
+		containerId: 'sfx-market-overview',
+		language: 'auto',
+		width: "290px",
+		height: "450px",
+		symbols: ["BTCUSD","NINTENDO.JP","AAPL.US","VOLV.SE","GOOG.US","LHA.DE","XAUEUR","BAY.DE","TOYOTA.JP","AUDCAD","USDSEK","ASX200","AUDCHF","AUDJPY","AUDNZD","AUDUSD","CAC40","CADCHF","CADJPY","CHFJPY","DAX30","DJI30","EURAUD","EURCAD","EURCHF","EURCZK","EURDKK","EURGBP","EURHKD","EURHUF","EURJPY","EURMXN","EURNOK","EURNZD","EURPLN","EURSEK","EURSGD","EURTRY","EURUSD","EURZAR","FTSE100","GBPAUD","GBPCAD","GBPCHF","GBPHKD","GBPNZD","GBPJPY","GBPUSD","HSI50","IBEX35","LTCUSD","NDX100","NIKKEI225","NZDCAD","NZDCHF","NZDJPY","NZDUSD","SMI20","SPX500","STOXX50","UKOIL","USDCAD","USDCHF","USDCNH","USDCZK","USDHKD","USDDKK","USDHUF","USDJPY","USDMXN","USDNOK","USDPLN","USDRUB","USDSGD","USDTRY","USDZAR","USOIL","XAGAUD","XAGUSD","XAUAUD","XAUUSD","EURRUB","NATURALGAS","USDILS","CHFPLN","AMZN.US","BABA.US","BAC.US","C.US","FB.US","FCX.US","FSLR.US","GS.US","JPM.US","MCD.US","NFLX.US","PG.US","TSLA.US","TWTR.US","WMT.US","XOM.US","RACE.US","ETHUSD","NTT.JP","PANASONI.JP","SONY.JP","ETCUSD","ADS.DE","ALV.DE","BMW.DE","DBK.DE","RWE.DE","SIE.DE","VOW.DE","AMD.US","ABB.SE","ERIC.SE","FING.SE","NDASEK.SE","TELIA.SE","SNAP.US","BCHUSD","USDKRW","ZECUSD","NVDA.US","ATVI.US","T.US","NKE.US","PFE.US","QCOM.US","DIS.US","BIDU.US","GM.US","ASELS.TR","TCELL.TR","THYAO.TR","BIMAS.TR","KOZAL.TR","ABEV.BR","PETROBRA.BR","ITAU.BR","TUPRAS.TR","VALE.BR","FENER.TR","MAVI.TR","TEL.JP","SUZUKI.JP","SHISEIDO.JP","SUZANO.BR","COSAN.BR","LLOY.UK","GLEN.UK","TSCO.UK","VOD.UK","BP.UK","GSK.UK","EZJ.UK","BARC.UK","CNA.UK","BATS.UK","OCDO.UK","BN.FR","BNP.FR","GLE.FR","RNO.FR","SAN.FR","AIR.FR","FP.FR","FR.FR","TLRY.US","GWPH.US","RKT.US","PLTR.US","RIOT.US","AMC.US","GME.US","STLA.FR","DASH.US","MAGALU.BR","B3.BR","XTZUSD","WAVUSD","YFIUSD","NEOUSD","EOSUSD","ADAUSD","DOTUSD","BNBUSD","ABNB.US","ZM.US","BYND.US","NWG.UK","DHER.DE","LNKUSD","SPCE.US","MSFT.US","PTON.US","WORK.US","UBER.US","BA.US"],
+		theme: "dark",
+		customElements: ["header","chartGridLines"],
+		categoriesOrder: ["Crypto","Equities JP","Equities US","Equities SE","Equities DE","Precious Metals","Forex","Indices Cash","Commodities","Equities TR","Equities BR","Equities UK","Equities FR"],
+
+	})
+</script>
+<!-- SimpleFX widget - END -->
             </div>
           </div>
         </div>

@@ -139,7 +139,7 @@
         <div class="container d-flex justify-content-between">
             <div>
               <strong class="text-danger">Need help?</strong> Chat with our representative
-            </div>`
+            </div>
             <div>
               <a href="/contact" class="btn btn-danger btn-sm">Chat Now <i class="far fa-comment-dots" style="font-size: 20px"></i> </a>
             </div>
