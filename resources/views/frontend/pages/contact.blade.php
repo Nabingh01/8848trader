@@ -17,7 +17,7 @@
               @endif
            </div>
               <h3>Contact <span class="text-danger"><i>our team</i></span></h3>
-              <p>Have questions about our services, looking to promote with us, or facing an issue? Send us a message using any of the methods below and <br> we will get back to you as soon as we can</p>
+              <p>Have questions about our services, looking to promote with us, or facing an issue? Send us a message using any of the methods below and <br> we will get back to you as soon as we can.</p>
               <div class="row">
                   <div class="col-md-6 bg-white py-5">
                       <h3>Your support <span class="text-danger"><i>Questions</i></span></h3>

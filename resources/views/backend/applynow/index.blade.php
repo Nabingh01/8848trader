@@ -37,7 +37,7 @@
                                     <td>{{ $apply->name }}</td>
                                     <td>{{ $apply->country }}</td>
                                     <td><a href="tel:{{ $apply->contact }}">{{ $apply->contact }}</a></td>
-                                    <td><a href="mail:{{ $apply->email}}">{{ $apply->email}}</a></td>
+                                    <td><a href="mailto:{{ $apply->email}}">{{ $apply->email}}</a></td>
                                     <td>{{ $apply->allcourse->name}}</td>
                                 </tr>
                                 @endforeach

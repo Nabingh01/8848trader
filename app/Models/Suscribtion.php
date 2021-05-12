@@ -10,6 +10,6 @@ class Suscribtion extends Model
     use HasFactory;
     public function allcourse()
     {
-        return $this->belongsTo(AllCourse::class);
+        return $this->belongsTo(AllCourse::class,'allcourse_id');
     }
 }

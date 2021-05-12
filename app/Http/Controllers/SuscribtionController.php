@@ -53,7 +53,7 @@ class SuscribtionController extends Controller
         $suscribtion->country=$request->country;
         $suscribtion->allcourse_id=$request->allcourse_id;
          $suscribtion->save();
-         $request->session()->flash('message','suscribed');
+         $request->session()->flash('message','Successfully subscribed');
          return redirect()->back();
     }
 

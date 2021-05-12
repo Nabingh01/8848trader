@@ -33,7 +33,7 @@
                     <p>
                     <i class="fas fa-check"></i> Understanding Forex and financial market.<br><br>
                     <i class="fas fa-check"></i> Learn how to read charts(not only forex)<br><br>
-                    <i class="fas fa-check"></i> Ongoing mentorship<br><br>
+                    <i class="fas fa-check"></i> Ongoing mentorship.<br><br>
                     <i class="fas fa-check"></i> Independent trading skill that can pay rest of the life.
                      </p>
                   </div>
@@ -82,7 +82,7 @@
                     <img src="images/forex.jpg" class="card-img-top" alt="..." style="max-height: 13rem; min-height: 13rem;">
                     <div class="card-body"style="height: 18rem;">
                       <h4>What is <span class="text-danger"><i>Forex</i></span> ?</h4>
-                      <p class="card-text">The FX market is a global decentralized market where the world’s different currencies change hands instantly which makes the constant fluctuations and oscillations in the exchange rates</p>
+                      <p class="card-text">The FX market is a global decentralized market where the world’s different currencies change hands instantly which makes the constant fluctuations and oscillations in the exchange rates.</p>
                     </div>
                   </div>
                 </div>
@@ -91,7 +91,7 @@
                   <div class="card">
                     <img src="images/crypto.jpg" class="card-img-top" alt="..." style="max-height: 13rem; min-height: 13rem;">
                     <div class="card-body" style="height: 18rem;">
-                      <h4> What is <span class="text-danger"><i>Cryptocurrency</i></span> ?</h4>
+                      <h4> What is <span class="text-danger"><i>Crypto</i></span> ?</h4>
                       <p class="card-text">A cryptocurrency (or “crypto”) is a digital currency that can be used to buy goods and services, but uses an online ledger with strong cryptography to secure online transactions. Much of the interest in these unregulated currencies is to trade for profit, with speculators at times driving prices skyward.</p>
                     </div>
                   </div>
@@ -102,7 +102,7 @@
                     <img src="images/stockmarket.jpg" class="card-img-top" alt="..." style="max-height: 13rem; min-height: 13rem;">
                     <div class="card-body" style="height: 18rem;">
                       <h4>What is <span class="text-danger"><i>stockmarket</i></span> ?</h4>
-                      <p class="card-text">A stock market, equity market, or share market is the aggregation of buyers and sellers of stocks, which represent ownership claims on businesses; these may include securities listed on a public stock </p>
+                      <p class="card-text">A stock market, equity market, or share market is the aggregation of buyers and sellers of stocks, which represent ownership claims on businesses; these may include securities listed on a public stock. </p>
                     </div>
                   </div>
                 </div>

@@ -50,7 +50,7 @@ class ApplyController extends Controller
         $apply->country=$request->country;
         $apply->allcourse_id=$request->allcourse_id;
          $apply->save();
-         $request->session()->flash('message','thank you for choosing us .');
+         $request->session()->flash('message','Thank you for choosing us');
          return redirect()->back();
     }
 

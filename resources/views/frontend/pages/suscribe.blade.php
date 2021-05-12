@@ -72,7 +72,7 @@
                     </select>
                 </div>
                 <div class="container d-flex flex-column justify-content-center align-items-center py-3">
-                    <button type="submit" class="btn btn-outline-danger btn-sm">suscribe</button>
+                    <button type="submit" class="btn btn-outline-danger btn-sm">Subscribe</button>
                 </div>
             </form>
             <div class="py-5">

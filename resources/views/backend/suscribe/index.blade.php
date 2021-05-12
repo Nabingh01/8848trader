@@ -39,7 +39,7 @@
                                     <td>{{ $suscribtion->country }}</td>
                                     <td><a href="tel:{{ $suscribtion->contact }}">{{ $suscribtion->contact }}</a></td>
                                     <td><a href="mailto:{{ $suscribtion->email}}">{{ $suscribtion->email}}</a></td>
-                                    <td>{{ $suscribtion->allcourse->name}}</td>
+                                    <td>{{ $suscribtion->allcourse['name']}}</td>
                                 </tr>
                                 @endforeach
                         </tbody>

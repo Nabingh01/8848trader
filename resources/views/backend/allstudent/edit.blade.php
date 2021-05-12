@@ -52,10 +52,10 @@
                         <p class="text-danger">{{ $message }}</p>
                         @enderror
                         <div class="form-group">
-                            <label for="counrty"> Country <span class="text-danger">*</span></label>
-                            <input id="counrty" class="form-control" type="counrty" name="counrty" value="{{ $students->counrty }}">
+                            <label for="country"> Country <span class="text-danger">*</span></label>
+                            <input id="country" class="form-control" type="country" name="country" value="{{ $students->country }}">
                         </div>
-                        @error('counrty')
+                        @error('country')
                         <p class="text-danger">{{ $message }}</p>
                         @enderror
                         <div class="form-group">

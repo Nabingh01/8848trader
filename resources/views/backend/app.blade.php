@@ -73,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </a>
     @else
     <a href="/" class="brand-link">
-      <img src="{{asset('images/8848logo.png')}}" alt="8848Trader Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="{{asset('images/8848logo.webp')}}" alt="8848Trader Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">8848 Trader</span>
     </a> 
     @endif
@@ -387,7 +387,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <img src="{{ asset('images/8848logo.png') }}" width="60" alt="">
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">8848 Trader</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021 <a href="/">8848 Trader</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->

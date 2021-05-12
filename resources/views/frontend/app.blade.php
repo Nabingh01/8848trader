@@ -99,7 +99,7 @@
                   <a class="nav-link" href="/home" style="font-family: 'Crete Round', serif;">Resource</a>
                 </li>
                 <li>
-                  <img src="{{asset('images/8848logo.png')}}" class="img-circle elevation-2" alt="User Image" style="width: 40px">
+                  <img src="{{asset('images/8848logo.webp')}}" class="img-circle elevation-2" alt="User Image" style="width: 40px">
                 </li>
                 {{-- <li>
                   <a href="#" class="nav-link">{{Auth()->user()->name}}</a>
@@ -165,7 +165,7 @@
            <ul>
              <a class="text-white" href=""><li>15 Isla Ave, <br>Glenroy, VIC 3046, Australia</li></a>
              <li><a class="text-white" href="Tel: +61 450 864 242">Tel: +61 450 864 242</a></li>
-             <li><a class="text-white" href="mailto: info@8848trading.com">Email: info@8848trading.com</a></li>
+             <li><a class="text-white" href="mailto: Info@8848trader.com">Email:Info@8848trader.com</a></li>
            </ul>
           </div>
 
@@ -191,5 +191,17 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     -->
+
+    {{-- twak.to --}}
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+<script>
+  window.__lc = window.__lc || {};
+  window.__lc.license = 12786519;
+  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechatinc.com/chat-with/12786519/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+
+    {{-- twak.to --}}
   </body>
 </html>
